@@ -22,6 +22,7 @@ jobs:
     # Calculates traffic and clones and stores in CSV file
     - name: GitHub traffic
       uses: sangonzal/repository-traffic-action@v.0.1.6
+      id: traffic
       env:
         TRAFFIC_ACTION_TOKEN: ${{ secrets.TRAFFIC_ACTION_TOKEN }}
         REPOSITORY_NAME: "OpenVisualCloud/Media-Transport-Library"
@@ -32,5 +33,5 @@ jobs:
       with:
         author_name: Santiago Gonzalez
         message: "GitHub traffic"
-        add: "./traffic_imtl/*"
+        add: "./traffic/*"
         ref: "main"  # commits to branch "main"
