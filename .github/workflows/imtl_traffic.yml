@@ -1,6 +1,7 @@
 name: imtl traffic
 
 on:
+  workflow_dispatch:
   schedule: 
     # runs once a week on sunday
     - cron: "55 23 * * 0"
