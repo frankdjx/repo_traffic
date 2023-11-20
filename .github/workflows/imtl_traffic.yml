@@ -16,6 +16,8 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      with:
+        ref: "traffic"
     
     # Calculates traffic and clones and stores in CSV file
     - name: GitHub traffic
@@ -31,4 +33,4 @@ jobs:
         author_name: Santiago Gonzalez
         message: "GitHub traffic"
         add: "./traffic/*"
-        ref: "main"  # commits to branch "traffic"
+        ref: "traffic"  # commits to branch "traffic"
